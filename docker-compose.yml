@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  aws:
+    build: .
+    volumes:
+        - "/Users/frank/Documents/Development:/development"
+        - "/Users/frank/.aws:/root/.aws"
+    environment:
+        - AWS_DEFAULT_REGION=us-east-1
