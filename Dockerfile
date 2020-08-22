@@ -11,6 +11,8 @@ RUN apk update \
 	bash
 
 RUN cd \
+	#Install the AWSCLI
+	&& pip3 install -r /tmp/requirements.txt \
 	# Install Terraform Binary
 	&& wget https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_VERSION}_linux_amd64.zip \
 	&& unzip terraform_${TF_VERSION}_linux_amd64 \
